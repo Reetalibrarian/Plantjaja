@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/leaficon.ico">
+
+    <title>Cover Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/js/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="dist/css/cover_ori.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  </head>
+
+  <body>
+    <div class="yyy ", style="position:relative;">
+      <div class="dropdown" style="text-align:center ;width:auto; height:100px;margin:10px 20px;">
+        <button class="  dropdown-toggle masthead-brand dropdown" type="button" id="menu1" data-toggle="dropdown"><h3 style="font-family: 'Helvetica';
+        letter-spacing: 2px;font-size: 1.3em;     -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        font-weight: bold;">Academia Sinica<br>生物多樣性研究中心</h3>
+        <span class="caret"></span></button>
+
+        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">首頁</a></li>
+          <li role="presentation" class="divider"></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">影像偵測</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">歷史紀錄</a></li>
+
+        </ul>
+      </div>
+ 
+      <div class="yl_space ">
+        <h1 style ="color:white; padding:10px;font-size: 28px;">可能物種</h1>
+      </div>
+      <div id="tablelook ">
+        <table style="width:60%; margin:auto" id='table_im_results'>
+          <tr >
+            <td class="td1"><img src="img/data/Agate beads.jpg" alt="plant view" style="width:100px;height:100px;"></td>
+            <td>
+              <p class="Name_Ch"> 瑪瑙珠
+              <p class="Name_italic">Solanum diphyllum L.
+            </td>   
+          </tr>
+          <tr>
+            <td class="td1"><img src="img/data/Aglaia.jpg" alt="plant view" style="width:100px;height:100px;" ></td>
+            <td>
+              <p class="Name_Ch"> 樹蘭
+              <p class="Name_italic"> Aglaia odorata Lour.
+            </td>
+          </tr>
+          <tr>
+            <td class="td1">
+              <img src="img/data/Bauhinia.jpg" alt="plant view" style="width:100px;height:100px;" ></td>
+             
+            <td>
+              <p class="Name_Ch"> 豔紫荊
+              <p class="Name_italic"> Bauhinia × blakeana Dunn.
+            </td>  
+          </tr>
+        </table>
+      </div> <!-- id="tablelook"> -->
+
+
+      <div class="mastfoot">
+        <div class="inner">
+          <!-- <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+  <script>
+
+    var nameTr = '';
+    var names = localStorage.im_results.split('|');
+    for (var i=0; i<names.length; i++) {
+      nameTr += '<tr><td class="td1"><img src="img/data/Agate beads.jpg" alt="plant view" style="width:100px;height:100px;"></td><td><p class="Name_Ch">中文'+names[i]+'<p class="Name_italic">'+names[i]+'</td></tr>\n';
+    }
+    var ffss=5566;
+    table_im_results.innerHTML = nameTr;
+  </script>
+</html>

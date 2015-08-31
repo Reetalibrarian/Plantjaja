@@ -1,0 +1,91 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+</head>
+<body>
+<form action="api.php" method="post" enctype="multipart/form-data">
+Select image to upload: <input type="file" name='fileToUpload' id="input" onchange="handleFile(this.files)"><br/>
+<canvas id='canvas'></canvas>
+<div id="img_preview"></div>
+Phyllotaxy <input type="number" name="phyllotaxy" id="phyllotaxy" value=1><br/>
+<button type="button" onclick="submitCompressed()">上傳照片</button>
+</form>
+
+
+
+<script>
+
+function submitCompressed () {
+  // var dataURL = canvas.toDataURL('image/jpeg', 0.5); // with image quality 0.5
+  var imgMimeType = 'image/jpeg';
+  var dataURL = canvas.toDataURL(imgMimeType);
+  var blob = dataURItoBlob(dataURL, imgMimeType);
+
+  var fd = new FormData();
+  fd.append("fileToUpload", blob);
+  fd.append("phyllotaxy", phyllotaxy.value);
+  fd.append("submit", true);
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "api.php");
+  xhr.onreadystatechange=function() {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      var data = JSON.parse(xhr.responseText);
+      //var data = xhr.responseText;
+    }  
+  }
+  xhr.send(fd);
+}
+
+function dataURItoBlob(dataURI, imgMimeType) {
+  var binary = atob(dataURI.split(',')[1]);
+  var array = [];
+  for(var i = 0; i < binary.length; i++) {
+    array.push(binary.charCodeAt(i));
+  }
+  return new Blob([new Uint8Array(array)], {type: imgMimeType});
+}
+
+function handleFile (files) {
+  var fileToUpload = files[0];
+
+  var MAX_WIDTH = 800;
+  var MAX_HEIGHT = 600;
+
+  if (fileToUpload.type.match('image/jpeg')) {
+    var ip = document.getElementById('img_preview');
+
+    var img = document.createElement("img");
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      img.src = e.target.result
+      var width = img.width;
+      var height = img.height;
+      if (width > height) {
+        if (width > MAX_WIDTH) {
+          height *= MAX_WIDTH / width;
+          width = MAX_WIDTH;
+        }
+      }
+      else {
+        if (height > MAX_HEIGHT) {
+          width *= MAX_HEIGHT / height;
+          height = MAX_HEIGHT;
+        }
+      }
+      canvas.width = width;
+      canvas.height = height;
+
+      var ctx = canvas.getContext("2d");
+      ctx.drawImage(img, 0, 0, width, height);
+    }
+    reader.readAsDataURL(fileToUpload);
+
+    // img_preview.appendChild(img);
+  }
+}
+
+</script>
+
+</body>
+</html>

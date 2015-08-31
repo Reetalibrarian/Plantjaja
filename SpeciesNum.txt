@@ -1,0 +1,64 @@
+1	Seifu	1
+2	Yan Bauhinia	1
+3	Macaranga	1
+4	Lobular Terminalia	4
+5	Bischofia javanica	2
+6	Melastoma	1
+7	Querong	1
+8	Podocarpus	1
+9	Nagi	1
+10	Fu Wood	1
+11	melaleuca	1
+12	scherp	1
+13	Ficus	1
+14	Gardenia	1
+15	Taiwan Luan tree	1
+16	Garlic vine	1
+17	Blackboard tree	3
+18	Myrtle	1
+19	Buergerianum	1
+20	Taiwan oil spots grass	1
+21	Bellows tree	1
+22	Lantana	1
+23	Melia	1
+24	Rhododendron	1
+25	Camellia	1
+26	Lagerstroemia	1
+27	Thunbergii	1
+28	Unknown origin	1
+29	Peltophorum pterocarpum	1
+30	Malabar chestnut	3
+31	Terminalia	1
+32	Grapefruit	5
+33	Taitung fire thorn wood	4
+34	Bauhinia	1
+35	Erythrina coral	2
+36	Beauty tree	3
+37	Huang Huai	1
+38	Aglaia	1
+39	Agate beads	1
+40	Wax tree	1
+41	Southern candle	1
+42	Tassel	1
+43	Wisteria	1
+44	Elixir flower	1
+45	Duranta erecta	1
+46	Saururaceae	1
+47	Osmanthus	4
+48	Spring is not the old	1
+49	Tallow	1
+50	Camphor tree	1
+51	Mango	1
+52	Haimeng fruit	4
+53	Long string nose	1
+54	Black raspberry convergence	3
+55	Bidens	1
+56	Legumes	1
+57	Certain Euphorbia	1
+58	Tulip vine	3
+59	Liquidambar	1
+60	Unknown	1
+61	Han's mountain grapes	1
+62	Sang leaflet	1
+63	Viburnum	1
+64	Cherry Hill	1
